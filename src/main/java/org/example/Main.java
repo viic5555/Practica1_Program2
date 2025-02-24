@@ -8,10 +8,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public void getAlumnosByAsignatura(Asignatura asignatura) {
-        asignatura.getAlumnos().forEach(alumno -> {});
-    }
-    public static void main(String[] args) {
 
-    }
 }

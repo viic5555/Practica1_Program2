@@ -5,27 +5,34 @@ import java.util.List;
 
 public class Asignatura {
     private String nombre;
-    private int codigo;
     private long creditos;
+    private int codigo;
     private Profesor profesor;
     private Titulacion titulacion;
-    private Matricula matricula;
+    public ArrayList<Convocatoria> convocatorias;
+    public ArrayList<Alumno> alumnos;
 
-    public Asignatura(String nombre, int codigo, long creditos, Profesor profesor, Titulacion titulacion, Matricula matricula) {
+    public Asignatura(String nombre, long creditos, int codigo, Profesor profesor, ArrayList<Convocatoria> convocatorias, Titulacion titulacion, ArrayList<Alumno> alumnos) {
         this.nombre = nombre;
-        this.codigo = codigo;
         this.creditos = creditos;
+        this.codigo = codigo;
         this.profesor = profesor;
+        this.convocatorias = convocatorias;
         this.titulacion = titulacion;
-        this.matricula = matricula;
+        this.alumnos = alumnos;
     }
 
-
-    /*public void addAlumno(Alumno alumno) {
-        this.alumnos.add(alumno);
+    // ¿return o ArrayList?
+    public static void showAlumnos(ArrayList<Alumno> alumnos) {
+        alumnos.forEach(System.out::println);
     }
 
-    public ArrayList<Alumno> getAlumnos() {
-        return alumnos;
-    }*/
+    public static void getConvocatoriasSuspensas (ArrayList<Convocatoria> convocatoriasSuspensas){
+
+    }
+
+    public static void getPrimerasConvocatoriasSuspensas (ArrayList<Convocatoria> convocatoriasSuspensas1){
+
+
+    }
 }

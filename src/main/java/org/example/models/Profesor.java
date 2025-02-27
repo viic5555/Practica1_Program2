@@ -1,11 +1,14 @@
 package org.example.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profesor extends Persona {
-    public List<Asignatura> asignaturasProfesor;
+    private int horasSemanales;
 
-    public Profesor(String nombre, String codigo) {
-        super(nombre, codigo);
+
+    public Profesor(String nombre, String codigo, ArrayList<Asignatura> asignaturas, int horasSemanales) {
+        super(nombre, codigo, asignaturas);
+        this.horasSemanales = horasSemanales;
     }
 }

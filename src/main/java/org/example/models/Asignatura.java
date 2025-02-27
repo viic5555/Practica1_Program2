@@ -1,7 +1,6 @@
 package org.example.models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Asignatura {
     private String nombre;

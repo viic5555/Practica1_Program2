@@ -16,14 +16,30 @@ public class Asignatura {
         this.creditos = creditos;
         this.codigo = codigo;
         this.profesor = profesor;
+        this.profesor.addAsignatura(this); // Añade la asignatura al profesor
         this.convocatorias = convocatorias;
         this.titulacion = titulacion;
         this.alumnos = alumnos;
     }
 
-    // ¿return o ArrayList?
-    public static void showAlumnos(ArrayList<Alumno> alumnos) {
-        alumnos.forEach(System.out::println);
+
+    // Getters
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    /**
+     *
+     * @param alumnos
+     * @return Lista #1: de alumnos matriculados en una determinada asignatura.
+     */
+    public static ArrayList<Alumno> getAlumnos(ArrayList<Alumno> alumnos) {
+        return alumnos;
     }
 
     public static void getConvocatoriasSuspensas (ArrayList<Convocatoria> convocatoriasSuspensas){
@@ -34,4 +50,7 @@ public class Asignatura {
 
 
     }
+
+
+
 }

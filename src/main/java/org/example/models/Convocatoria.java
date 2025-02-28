@@ -3,6 +3,19 @@ package org.example.models;
 import java.util.ArrayList;
 
 public class Convocatoria {
+    final public static float MARCA_SUSPENSO = 4.9f;
+    final public static float MARCA_SUFICIENTE = 5.0f;
+    final public static float MARCA_BIEN = 6.0f;
+    final public static float MARCA_NOTABLE = 7.0f;
+    final public static float MARCA_SOBRESALIENTE = 8.0f;
+
+
+    final public static String SUSPENSO = "Suspenso.";
+    final public static String SUFICIENTE = "Suficiente.";
+    final public static String BIEN = "Bien.";
+    final public static String NOTABLE = "Notable.";
+    final public static String SOBRESALIENTE = "Sobresaliente.";
+
     private int anioMatricula;
     private int numeroConvocatoria;
     private float nota;
@@ -18,6 +31,7 @@ public class Convocatoria {
         this.asignaturas = asignaturas;
         this.alumnos = alumnos;
     }
+
 
     // Quizás los métodos de convocatorias vayan aquí y no en Asignatura ¿No creo no?
 }

@@ -14,4 +14,19 @@ public class Alumno extends Persona {
         super(nombre, codigo, asignaturas);
 
     }
+
+    public ArrayList<Convocatoria> getConvocatorias() {
+        return convocatorias;
+    }
+
+    /**
+     *
+     * @param asignaturas
+     * @return Lista #3, asignaturas en las que está matriculado un alumno determinado.
+     */
+    private static ArrayList<Asignatura> showAsignaturas(ArrayList<Asignatura> asignaturas) {
+        return asignaturas;
+    }
+
+
 }

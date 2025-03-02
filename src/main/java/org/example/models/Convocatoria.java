@@ -20,18 +20,41 @@ public class Convocatoria {
     private int numeroConvocatoria;
     private float nota;
     private String notaTextual;
-    ArrayList<Asignatura> asignaturas;
-    ArrayList<Alumno> alumnos;
+    Asignatura asignatura;
+    Alumno alumno;
 
-    public Convocatoria(int anioMatricula, int numeroConvocatoria, float nota, String notaTextual, ArrayList<Asignatura> asignaturas, ArrayList<Alumno> alumnos) {
+    public Convocatoria(int anioMatricula, int numeroConvocatoria, float nota, String notaTextual, Asignatura asignatura, Alumno alumno) {
         this.anioMatricula = anioMatricula;
         this.numeroConvocatoria = numeroConvocatoria;
         this.nota = nota;
         this.notaTextual = notaTextual;
-        this.asignaturas = asignaturas;
-        this.alumnos = alumnos;
+        this.asignatura = asignatura;
+        this.alumno = alumno;
     }
 
+    public int getAnioMatricula() {
+        return anioMatricula;
+    }
 
-    // Quizás los métodos de convocatorias vayan aquí y no en Asignatura ¿No creo no?
+    public int getNumeroConvocatoria() {
+        return numeroConvocatoria;
+    }
+
+    public float getNota() {
+        return nota;
+    }
+
+    public String getNotaTextual() {
+        return notaTextual;
+    }
+
+    public Asignatura getAsignatura() {
+        return asignatura;
+    }
+
+    public Alumno getAlumno() {
+        return alumno;
+    }
+    // Quizás los métodos de convocatorias vayan aquí y no en Asignatura ¿No creo no? Pues SI xd
+
 }

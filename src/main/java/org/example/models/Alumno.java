@@ -7,7 +7,7 @@ import java.util.Set;
 public class Alumno extends Persona {
     public ArrayList<Convocatoria> convocatorias;
 
-    public Alumno(String nombre, String codigo) {
+    public Alumno(String nombre, int codigo) {
         super(nombre, codigo);
         this.convocatorias = new ArrayList<>();
     }

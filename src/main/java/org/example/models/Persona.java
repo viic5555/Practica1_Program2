@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public abstract class Persona {
     private String nombre;
-    private String codigo;
-    public Persona(String nombre, String codigo) {
+    private int codigo;
+    public Persona(String nombre, int codigo) {
         this.nombre = nombre;
         this.codigo = codigo;
     }
@@ -14,7 +14,7 @@ public abstract class Persona {
         return nombre;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 

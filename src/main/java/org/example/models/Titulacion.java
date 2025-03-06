@@ -9,11 +9,10 @@ public class Titulacion {
     private Facultad facultad;
     private ArrayList<Asignatura> asignaturas;
 
-    public Titulacion(String nombre, int codigo, Facultad facultad, ArrayList<Asignatura> asignaturas) {
+    public Titulacion(String nombre, int codigo, Facultad facultad) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.facultad = facultad;
-        this.asignaturas = asignaturas;
     }
 
     /**

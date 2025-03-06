@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class Profesor extends Persona {
     private int horasSemanales;
-    private ArrayList<Asignatura> asignaturas = new ArrayList<>();
+    private ArrayList<Asignatura> asignaturas;
 
 
-    public Profesor(String nombre, String codigo, int horasSemanales) {
+    public Profesor(String nombre, int codigo, int horasSemanales, ArrayList<Asignatura> asignaturas) {
         super(nombre, codigo);
         this.horasSemanales = horasSemanales;
+        this.asignaturas = new ArrayList<>();
 
     }
 

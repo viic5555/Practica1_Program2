@@ -28,6 +28,9 @@ public class Convocatoria {
         this.notaTextual = setNotaTextual(nota);
         this.asignatura = asignatura;
         this.alumno = alumno;
+
+        // Aquí se mantiene la relación 1:N!
+        asignatura.getConvocatorias().add(this);
     }
 
     public int getNumeroConvocatoria() {

@@ -6,9 +6,14 @@ public class Facultad {
     private String nombre;
     private int codigo;
     private long telefono;
-    public ArrayList<Titulacion> titulaciones;
+    public ArrayList<Titulacion> titulaciones = new ArrayList<>();
     private ArrayList<Profesor> profesores = new ArrayList<>(); // Nueva lista
 
+    public Facultad(String nombre, int codigo, long telefono) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.telefono = telefono;
+    }
 
     private static void addTitulacion(ArrayList<Titulacion> titulaciones, Titulacion titulacion) {
         titulaciones.add(titulacion);

@@ -32,10 +32,6 @@ public class Asignatura {
         return codigo;
     }
 
-    public static ArrayList<Alumno> getAlumnos(ArrayList<Alumno> alumnos) {
-        return alumnos;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;

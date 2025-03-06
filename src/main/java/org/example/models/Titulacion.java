@@ -9,9 +9,6 @@ public class Titulacion {
     private Facultad facultad;
     private ArrayList<Asignatura> asignaturas;
 
-    public Titulacion() {
-    }
-
     public Titulacion(String nombre, int codigo, Facultad facultad, ArrayList<Asignatura> asignaturas) {
         this.nombre = nombre;
         this.codigo = codigo;
@@ -21,7 +18,7 @@ public class Titulacion {
 
     /**
      * Lista #5 Asignaturas dentro de una Titulación (no deberían estar repetidas.)
-     * @param asignaturas
+     * @param asignaturas listado de asignaturas
      */
     private static void showAsignaturasTitulacion(ArrayList<Asignatura> asignaturas) {
         asignaturas.forEach(System.out::println);

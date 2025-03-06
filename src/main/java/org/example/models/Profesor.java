@@ -17,10 +17,6 @@ public class Profesor extends Persona {
         return asignaturas;
     }
 
-    public int getHorasSemanales() {
-        return horasSemanales;
-    }
-
     /**
      * Lista #2 Muestra las asignaturas que imparte cada profesor
      */

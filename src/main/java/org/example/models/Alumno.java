@@ -12,10 +12,6 @@ public class Alumno extends Persona {
         this.convocatorias = new ArrayList<>();
     }
 
-    public ArrayList<Convocatoria> getConvocatorias() {
-        return convocatorias;
-    }
-
     /**
      * Lista #3 Imprime un listado de las asignaturas que el alumno en cuestión está matriculado
      *
@@ -56,7 +52,7 @@ public class Alumno extends Persona {
 
     /**
      * Lista #6 asignaturas que un alumno no ha superado en primera convocatoria.
-     * @param convocatorias
+     * @param convocatorias listado de convocatorias de un alumno.
      */
     public void asignaturasSuspensasPrimeraConvocatoria(ArrayList<Convocatoria> convocatorias) {
         for (Convocatoria convocatoria : convocatorias) {

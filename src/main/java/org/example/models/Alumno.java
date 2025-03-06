@@ -53,4 +53,20 @@ public class Alumno extends Persona {
             }
         }
     }
+
+    /**
+     * Lista #6 asignaturas que un alumno no ha superado en primera convocatoria.
+     * @param convocatorias
+     */
+    public void asignaturasSuspensasPrimeraConvocatoria(ArrayList<Convocatoria> convocatorias) {
+        for (Convocatoria convocatoria : convocatorias) {
+            // Verificar si la nota textual es "Suspenso"
+            if (convocatoria.getNotaTextual().equals(Convocatoria.SUSPENSO) && convocatoria.getNumeroConvocatoria() == 1) {
+                // Obtener la asignatura y el año de la convocatoria
+                Asignatura asignatura = convocatoria.getAsignatura();
+                System.out.println("Asignatura: " + asignatura.getNombre() +"- Nota Textual: "+ convocatoria.getNotaTextual() +" - Matrícula número: " + convocatoria.getNumeroConvocatoria());
+
+            }
+        }
+    }
 }

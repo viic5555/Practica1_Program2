@@ -30,16 +30,16 @@ public class Convocatoria {
         this.alumno = alumno;
     }
 
+    public int getNumeroConvocatoria() {
+        return numeroConvocatoria;
+    }
+
     public Asignatura getAsignatura() {
         return asignatura;
     }
 
     public Alumno getAlumno() {
         return alumno;
-    }
-
-    public float getNota() {
-        return nota;
     }
 
     public String getNotaTextual() {

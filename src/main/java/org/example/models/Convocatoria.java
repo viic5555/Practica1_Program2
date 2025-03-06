@@ -42,6 +42,10 @@ public class Convocatoria {
         return nota;
     }
 
+    public String getNotaTextual() {
+        return notaTextual;
+    }
+
     public int getAnioMatricula() {
         return anioMatricula;
     }

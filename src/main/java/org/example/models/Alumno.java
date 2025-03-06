@@ -41,7 +41,16 @@ public class Alumno extends Persona {
     /**
      * Lista #4: mostrar nombre y año de las asignaturas que tiene suspensas un alumno determinado.
      */
-    public void asignaturasSuspensasNombreYAnio(){
+    public void asignaturasSuspensasNombreYAnio(ArrayList<Convocatoria> convocatorias) {
+        for (Convocatoria convocatoria : convocatorias) {
+            // Verificar si la nota textual es "Suspenso"
+            if (convocatoria.getNotaTextual().equals(Convocatoria.SUSPENSO)) {
+                // Obtener la asignatura y el año de la convocatoria
+                Asignatura asignatura = convocatoria.getAsignatura();
 
+                // Mostrar el nombre de la asignatura y el año
+                System.out.println("Asignatura: " + asignatura.getNombre() +"- Nota Textual: "+ convocatoria.getNotaTextual() +" - Año: " + convocatoria.getAnioMatricula());
+            }
+        }
     }
 }

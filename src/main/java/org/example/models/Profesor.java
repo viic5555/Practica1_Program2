@@ -13,6 +13,10 @@ public class Profesor extends Persona {
 
     }
 
+    public ArrayList<Asignatura> getAsignaturas() {
+        return asignaturas;
+    }
+
     public int getHorasSemanales() {
         return horasSemanales;
     }

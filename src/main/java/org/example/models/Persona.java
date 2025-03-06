@@ -1,6 +1,6 @@
 package org.example.models;
 
-import java.util.ArrayList;
+import java.util.Objects;
 
 public abstract class Persona {
     private String nombre;
@@ -16,5 +16,17 @@ public abstract class Persona {
 
     public String getCodigo() {
         return codigo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Persona persona = (Persona) o;
+        return Objects.equals(codigo, persona.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(codigo);
     }
 }

@@ -37,4 +37,11 @@ public class Alumno extends Persona {
             System.out.println("Código: " + asignatura.getCodigo() + " - Nombre: " + asignatura.getNombre());
         }
     }
+
+    /**
+     * Lista #4: mostrar nombre y año de las asignaturas que tiene suspensas un alumno determinado.
+     */
+    public void asignaturasSuspensasNombreYAnio(){
+
+    }
 }

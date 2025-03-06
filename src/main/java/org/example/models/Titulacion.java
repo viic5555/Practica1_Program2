@@ -19,7 +19,11 @@ public class Titulacion {
         this.asignaturas = asignaturas;
     }
 
-    private static void showAsignaturas(ArrayList<Asignatura> asignaturas) {
+    /**
+     * Lista #5 Asignaturas dentro de una Titulación (no deberían estar repetidas.)
+     * @param asignaturas
+     */
+    private static void showAsignaturasTitulacion(ArrayList<Asignatura> asignaturas) {
         asignaturas.forEach(System.out::println);
     }
 }

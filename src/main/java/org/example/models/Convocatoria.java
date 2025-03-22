@@ -68,4 +68,13 @@ public class Convocatoria {
             return this.notaTextual = MATRICULA_DE_HONOR;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Asignatura: " + asignatura.getNombre() +
+                " - Nota: " + nota +
+                " - Nota Textual: " + notaTextual +
+                " - Año: " + anioMatricula +
+                " - Nº de Convocatoria: " + numeroConvocatoria;
+    }
 }

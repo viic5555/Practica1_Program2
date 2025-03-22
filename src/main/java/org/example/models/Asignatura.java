@@ -33,10 +33,6 @@ public class Asignatura {
         return nombre;
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
-
     public ArrayList<Convocatoria> getConvocatorias() {
         return convocatorias;
     }
@@ -53,6 +49,14 @@ public class Asignatura {
         return Objects.hashCode(codigo);
     }
 
+    @Override
+    public String toString() {
+        return "Asignatura{" +
+                "nombre='" + nombre + '\'' +
+                ", creditos=" + creditos +
+                ", codigo=" + codigo +
+                '}';
+    }
 
     /**
      * Lista #1: de alumnos matriculados en una determinada asignatura.

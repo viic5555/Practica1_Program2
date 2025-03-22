@@ -17,11 +17,18 @@ public class Profesor extends Persona {
     public ArrayList<Asignatura> getAsignaturas() {
         return asignaturas;
     }
+    public void addAsignatura(Asignatura asignatura) {
+        // verificamos que la asignatura no esté ya incluida en la lista de asignaturas del profesor.
+        if (!asignaturas.contains(asignatura)) {
+            asignaturas.add(asignatura);
+        }
+    }
 
     /**
      * Lista #2 Muestra las asignaturas que imparte cada profesor
      */
     public void mostrarAsignaturas() {
+        System.out.println("Asignaturas que imparte el profesor: " + this.getNombre());
         asignaturas.forEach(System.out::println);
     }
 }

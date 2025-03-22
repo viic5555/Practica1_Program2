@@ -2,6 +2,10 @@ package org.example.models;
 
 import java.util.ArrayList;
 
+/**
+ * Facultad.java
+ * Version 1.0 22/03/2025 Victor Martin
+ */
 public class Facultad {
     private String nombre;
     private int codigo;
@@ -13,22 +17,6 @@ public class Facultad {
         this.nombre = nombre;
         this.codigo = codigo;
         this.telefono = telefono;
-    }
-
-    private static void addTitulacion(ArrayList<Titulacion> titulaciones, Titulacion titulacion) {
-        titulaciones.add(titulacion);
-    }
-
-    private static void removeTitulacion(ArrayList<Titulacion> titulaciones, Titulacion titulacion) {
-        titulaciones.remove(titulacion);
-    }
-
-    private static void addProfesor(ArrayList<Profesor> profesores, Profesor profesor) {
-        profesores.add(profesor);
-    }
-
-    private static void removeProfesor(ArrayList<Profesor> profesores, Profesor profesor) {
-        profesores.remove(profesor);
     }
 
     /**

@@ -4,25 +4,43 @@ import org.example.models.*;
 
 import java.util.ArrayList;
 
+/**
+ * Main.java
+ * Version 1.0 22/03/24 Victor Martin
+ */
 public class Main {
+    final static String SEPARADOR_DE_LINEAS= "\n";
     public static void main(String[] args) {
         // Crear facultad y titulación
-        Facultad escuelaPolitecnicaSuperiorDeTeruel = new Facultad("Escuela Politecnica superior de Teruel", 1, 912345678);
-        Titulacion ingenieriaInformatica = new Titulacion("Ingenieria Informatica", 1, 978000000,escuelaPolitecnicaSuperiorDeTeruel);
+        Facultad escuelaPolitecnicaSuperiorDeTeruel = new Facultad(
+                "Escuela Politecnica superior de Teruel", 1, 912345678
+        );
+        Titulacion ingenieriaInformatica = new Titulacion(
+                "Ingenieria Informatica", 1, 978000000, escuelaPolitecnicaSuperiorDeTeruel
+        );
 
         // Crear profesores
-        Profesor jose = new Profesor("José Roldán", 101, 10, new ArrayList<>());
-        Profesor daniel = new Profesor("Daniel Isidoro", 102, 12, new ArrayList<>());
+        Profesor jose = new Profesor("José Roldán", 101, 10);
+        Profesor daniel = new Profesor("Daniel Isidoro", 102, 12);
 
         // Crear alumnos
         Alumno carlos = new Alumno("Carlos", 201);
         Alumno maria = new Alumno("Maria", 202);
         Alumno luis = new Alumno("Luis", 203);
 
-        // Crear asignaturas (se añaden automaticamente al profesor)
-        Asignatura matematicas = new Asignatura("Matematicas", 6.0f, 301, jose, new ArrayList<>(), ingenieriaInformatica);
-        Asignatura programacion = new Asignatura("Programación", 6.0f, 302, jose, new ArrayList<>(), ingenieriaInformatica);
-        Asignatura estadistica = new Asignatura("Estadística", 6.0f, 303, daniel, new ArrayList<>(), ingenieriaInformatica);
+        /* Crear asignaturas. La relación Asignatura-Profesor es bidireccional en el momento que creamos la asignatura
+           con un profesor en el constructor */
+        Asignatura matematicas = new Asignatura(
+                "Matematicas", 6.0f, 301, jose, new ArrayList<>(), ingenieriaInformatica
+        );
+        Asignatura programacion = new Asignatura(
+                "Programación", 6.0f, 302, jose, new ArrayList<>(), ingenieriaInformatica
+        );
+        Asignatura estadistica = new Asignatura(
+                "Estadística", 6.0f, 303, daniel, new ArrayList<>(), ingenieriaInformatica
+        );
+
+        // Añadimos estas asignaturas a la titulacion que tenemos creada.
         ingenieriaInformatica.addAsignatura(matematicas);
         ingenieriaInformatica.addAsignatura(programacion);
         ingenieriaInformatica.addAsignatura(estadistica);
@@ -47,24 +65,24 @@ public class Main {
         // PRUEBA LISTA 1
         matematicas.mostrarAlumnos();
         programacion.mostrarAlumnos();
-        System.out.println("\n");
+        System.out.println(SEPARADOR_DE_LINEAS); // Para espaciar las diferentes consultas
 
         // PRUEBA LISTA 2
         jose.mostrarAsignaturas();
-        System.out.println("\n");
+        System.out.println(SEPARADOR_DE_LINEAS);
 
         // PRUEBA LISTA 3
-        // como se puede apreciar al ejecutar esta instrucción, la duplicidad está controlada en la lista.
+        // Como se puede apreciar al ejecutar esta instrucción, la duplicidad está controlada en la lista.
         maria.asignaturasFromAlumno();
-        System.out.println("\n");
+        System.out.println(SEPARADOR_DE_LINEAS);
 
         // PRUEBA LISTA 4
         maria.asignaturasSuspensasNombreYAnio();
-        System.out.println("\n");
+        System.out.println(SEPARADOR_DE_LINEAS);
 
         // PRUEBA LISTA 5
         ingenieriaInformatica.asignaturasFromTitulacion();
-        System.out.println("\n");
+        System.out.println(SEPARADOR_DE_LINEAS);
 
         // PRUEBA LISTA 6
         maria.asignaturasSuspensasPrimeraConvocatoria();

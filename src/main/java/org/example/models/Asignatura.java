@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ *  Asignatura.java
+ *  Version 1.0 22/03/2025 Victor Martin
+ */
 public class Asignatura {
     private String nombre;
     private float creditos;
@@ -27,7 +31,6 @@ public class Asignatura {
         }
     }
 
-
     // Getters
     public String getNombre() {
         return nombre;
@@ -37,6 +40,11 @@ public class Asignatura {
         return convocatorias;
     }
 
+    /**
+     * @param o hace referencia a este mismo objeto.
+     * @return booleano que indica si la Asignatura es identica a la otra, se usa en algunas consultas como validacion
+     *  + para evitar duplicidades.
+     */
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -44,11 +52,19 @@ public class Asignatura {
         return codigo == that.codigo;
     }
 
+    /**
+     *
+     * @return convierte el código de la asignatura en un hashCode unívoco que ninguna otra Asignatura puede tener.
+     */
     @Override
     public int hashCode() {
         return Objects.hashCode(codigo);
     }
 
+    /**
+     *
+     * @return formato de presentación para asignatura en algunas consultas.
+     */
     @Override
     public String toString() {
         return "Asignatura{" +

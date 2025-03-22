@@ -1,5 +1,9 @@
 package org.example.models;
 
+/**
+ *  Convocatoria.java
+ *  Version 1.0 22/03/2025 Victor Martin
+ */
 public class Convocatoria {
     final public static float MARCA_SUFICIENTE = 5.0f;
     final public static float MARCA_BIEN = 6.0f;
@@ -29,7 +33,7 @@ public class Convocatoria {
         this.asignatura = asignatura;
         this.alumno = alumno;
 
-        // Aquí se mantiene la relación 1:N!
+        // Aqui se mantiene la relación 1:N!
         asignatura.getConvocatorias().add(this);
     }
 
@@ -49,10 +53,11 @@ public class Convocatoria {
         return notaTextual;
     }
 
-    public int getAnioMatricula() {
-        return anioMatricula;
-    }
-
+    /**
+     *
+     * @param nota nota numérica de la Convocatoria
+     * @return la nota textual en base a la nota numérica dependiendo de los límites en los que se encuentre.
+     */
     public String setNotaTextual(float nota) {
         if (nota < MARCA_SUFICIENTE) {
             return this.notaTextual = SUSPENSO;
@@ -69,6 +74,10 @@ public class Convocatoria {
         }
     }
 
+    /**
+     *
+     * @return formato de presentación de la convocatoria para las diferentes consultas.
+     */
     @Override
     public String toString() {
         return "Asignatura: " + asignatura.getNombre() +

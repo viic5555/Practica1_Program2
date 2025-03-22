@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Alumno.java
+ * Version 1.0 22/03/2025 Victor Martin
+ */
 public class Alumno extends Persona {
     public ArrayList<Convocatoria> convocatorias;
 
@@ -20,16 +24,10 @@ public class Alumno extends Persona {
         convocatorias.add(convocatoria);
     }
     /**
-     * Lista #3 Imprime un listado de las asignaturas que el alumno en cuestión está matriculado
-     *
+     * Lista #3: Imprime un listado de las asignaturas que el alumno en cuestión está matriculado. Sin duplicidades.
      */
     public void asignaturasFromAlumno() {
         System.out.println("Asignaturas en las que está matriculado el alumno NIP: " + this.getCodigo());
-        // Un Set es un tipo de colección en Java que no permite duplicados. Ya que internamente utiliza equals() y
-        // hashCode() del tipo de objeto sobre el que hay que hacer la colección (Asignatura en este caso, y por ello he
-        // generado manualmente ambos métodos en dicha clase) para verificar la igualdad de los dos elementos.
-        // Por ello en el primer for añadimos todas las asignaturas sin ningún filtro y en el segundo for se realiza la
-        // impresión por pantalla de los nombres y códigos de las asignaturas sin necesidad de realizar ninguna comprobación manual.
         Set<Asignatura> asignaturasUnicas = new HashSet<>();
 
         for (Convocatoria convocatoria : convocatorias) {
@@ -50,7 +48,7 @@ public class Alumno extends Persona {
         for (Convocatoria convocatoria : this.getConvocatorias()) { // Accede directamente a la lista del alumno
             // Verificar si la nota textual es "Suspenso"
             if (convocatoria.getNotaTextual().equals(Convocatoria.SUSPENSO)) {
-                System.out.println(convocatoria); // Usa el método toString() de Convocatoria
+                System.out.println(convocatoria);
             }
         }
     }
